@@ -11,3 +11,9 @@ function areThereDuplicates(args) {
     }
     return false;
   }
+
+  // AWESOME ONE LINE SOLUTION!
+
+  function areThereDuplicates2() {
+    return new Set(arguments).size !== arguments.length;
+  }
