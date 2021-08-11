@@ -2,6 +2,8 @@
 // Function returns true if a single value in the array returns true when
 // passed to the callback.  Otherwise, returns false.
 
+const isOdd = val => val % 2 !== 0;
+
 function someRecursive(array, callback){
   if(array.length === 0) return false;
   if(callback(array[0])) return true;
