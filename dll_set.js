@@ -38,7 +38,7 @@ class DoublyLinkedList{
                 count++;
             }
         } else {
-            count = length - 1;
+            count = this.length - 1;
             current = this.tail;
             while(current !== index){
                 current = current.prev;
