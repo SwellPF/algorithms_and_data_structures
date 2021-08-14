@@ -51,12 +51,21 @@ class DoublyLinkedList {
     }
     insert(index, val){
         if(index < 0 || index >= this.length) return false;
-        if(index === 0) return !!unshift(index, val);
-        if(index === this.length) return !!push(index, val);
-        let foundNode = get(index-1);
+        if(index === 0) return !!unshift(val);
+        if(index === this.length) return !!push(val);
         
+        let newNode = new Node(val);
+        let beforeNode = this.get(index-1);
+        let afterNode = beforeNode.next;
         
+        beforeNode.next = newNode;
+        newNode.prev = beforeNode;
+        newNode.next = afterNode;
+        afterNode.prev = newNode;
+        this.length++;
+        return true;
     }
+    
     remove(index){
         if(index < 0 || index >= this.length) return undefined;
         if(index === 0) return shift(index);
