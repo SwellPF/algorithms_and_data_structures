@@ -34,7 +34,7 @@ class SinglyLinkedList {
                 this.head = temp;
             } 
         } else {
-            for(let i = 0; i < this.length-1; i++){
+            for(let i = 0; i < this.length+num; i++){
                 this.tail.next = this.head;
                 temp = this.head.next;
                 this.tail = this.head;
