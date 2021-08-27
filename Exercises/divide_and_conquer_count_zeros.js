@@ -3,7 +3,6 @@ function countZeroes(array){
     let max = array.length;
     while(min <= max){
         let middle = Math.floor((max + min)/2);
-        let currentElement = array[middle];
         if(array[middle] === 0 && array[middle-1] === 1 ) return array.length-middle;
         if(array[middle] === 1){
             min = middle + 1;
