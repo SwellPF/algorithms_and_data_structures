@@ -11,6 +11,6 @@ function countZeroes(array){
             max = middle - 1;
         }
     }
-    if(array[min] == 0) return array.length;
-    return 0;
+    array[min] == 0 ? result = array.length : result = 0;
+    return result;
 }
