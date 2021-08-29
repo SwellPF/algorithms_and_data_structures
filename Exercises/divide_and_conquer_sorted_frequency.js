@@ -10,6 +10,7 @@ function sortedFrequency(array, target){
         if(array[middle] >= target) end = middle -1;
         if(array[middle] == target) foundMin = middle;
     }
+    if(foundMin == 0) return -1;
     end = array.length-1; 
     start = foundMin;
     while(start <= end){
