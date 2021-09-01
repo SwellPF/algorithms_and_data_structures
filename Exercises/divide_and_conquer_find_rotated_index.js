@@ -1,0 +1,3 @@
+function findRotatedIndex(array, index){
+
+}
